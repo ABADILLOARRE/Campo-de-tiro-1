@@ -1,9 +1,9 @@
-var score =0;
+
 var gun,bluebubble,redbubble, bullet, backBoard;
 
-var gunImg,bubbleImg, bulletImg, blastImg, backBoardImg;
+var gunImg,redBubbleImg,blueBubbleBImg, bulletImg, blastImg, backBoardImg;
 
-var redBubbleGroup, redBubbleGroup, bulletGroup;
+var redBubbleGroup, blueBubbleGroup, bulletGroup;
 
 
 var life =3;
@@ -79,9 +79,9 @@ function draw() {
       handleBubbleCollision(blueBubbleGroup);
     }*/
     
-    /*if(blueBubbleGroup.collide(bulletGroup)){
+    if(blueBubbleGroup.collide(bulletGroup)){
       handleBubbleCollision(blueBubbleGroup);
-    }*/
+    }
 
     if(redBubbleGroup.collide(bulletGroup)){
       handleBubbleCollision(redBubbleGroup);
@@ -131,8 +131,8 @@ function handleBubbleCollision(bubbleGroup){
 
 function handleGameover(bubbleGroup){
   
-    /*life=life-1;
-    bubbleGroup.destroyEach();*/
+    life=life-1;
+    bubbleGroup.destroyEach();
 
      /*life=life+1;
     bubbleGroup.destroyEach();*/
